@@ -1,0 +1,17 @@
+{
+  "name": "read",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "webtomd": "./index.js"
+  },
+  "dependencies": {
+    "jsdom": "^16.2.2",
+    "readability": "github:mozilla/readability",
+    "turndown": "^6.0.0"
+  }
+}
