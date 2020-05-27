@@ -37,9 +37,10 @@ async function main() {
   const markdown = await turndownService.turndown(article.content.toString() )
   const contents = `# ${article.title}\n\n${markdown}`
 
-  writeFile(`${article.title}.md`, contents, function (err) {
+  const name = article.title.replace('/', '-')
+  writeFile(`${name}.md`, contents, function (err) {
     if (err) return console.log(err);
-      console.log(`${article.title} > ${article.title}.md`);
+      console.log(`${article.title} > ${name}.md`);
     });
 }
 
