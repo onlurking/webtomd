@@ -35,9 +35,10 @@ async function getContent() {
 async function main() {
   const article = await (await getContent())
   const markdown = await turndownService.turndown(article.content.toString() )
-  const contents = `# ${article.title}\n\n${markdown}`
+  const contents = `# ${article.title}\n\n${markdown}\n\n[source](${url})\n`
 
   const name = article.title.replace('/', '-')
+
   writeFile(`${name}.md`, contents, function (err) {
     if (err) return console.log(err);
       console.log(`${article.title} > ${name}.md`);
@@ -47,3 +48,4 @@ async function main() {
 if(args.length > 0) {
   main()
 }
+
