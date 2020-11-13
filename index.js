@@ -34,7 +34,7 @@ async function getContent() {
 
 async function main() {
   const article = await (await getContent())
-  const markdown = await turndownService.turndown(article.content.toString() )
+  const markdown = turndownService.turndown(article.content.toString() )
   const contents = `# ${article.title}\n\n${markdown}\n\n[source](${url})\n`
 
   const name = article.title.replace('/', '-')

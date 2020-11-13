@@ -1,6 +1,6 @@
 {
   "name": "webtomd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "keywords": [],
@@ -10,8 +10,8 @@
     "webtomd": "./index.js"
   },
   "dependencies": {
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.4.0",
     "readability": "github:mozilla/readability",
-    "turndown": "^6.0.0"
+    "turndown": "^7.0.0"
   }
 }
