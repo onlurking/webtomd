@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const Readability = require("readability");
+const readability = require("readability");
 const JSDOM = require("jsdom").JSDOM;
 const requestPromise = require("request-promise-native");
 var TurndownService = require('turndown')
@@ -26,7 +26,7 @@ async function getContent() {
         url: url,
     });
 
-    const reader = new Readability(doc.window.document);
+    const reader = new readability.Readability(doc.window.document);
     const article = reader.parse();
 
     return article
